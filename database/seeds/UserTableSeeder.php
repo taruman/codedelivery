@@ -13,6 +13,11 @@ class UserTableSeeder extends Seeder
     {
         factory(\CodeDelivery\Models\User::class, 10)->create()->each(function($u){
             $u->client()->save(factory(\CodeDelivery\Models\Client::class)->make());
+
+            for ($i = 0; $i <= 5; $i++)
+            {
+                $u->orders()->save(factory(CodeDelivery\Models\Order::class)->make());
+            }
         });
     }
 }

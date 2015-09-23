@@ -43,3 +43,10 @@ $factory->define(CodeDelivery\Models\Client::class, function (Faker\Generator $f
         'zipcode' => $faker->postcode
     ];
 });
+
+$factory->define(CodeDelivery\Models\Order::class, function (Faker\Generator $faker) {
+    return [
+        'status' => $faker->numberBetween(1, 3),
+        'total' => $faker->numberBetween(50, 100)
+    ];
+});

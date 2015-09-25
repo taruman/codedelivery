@@ -3,7 +3,7 @@
 @section('content')
 
 <div class='container'>
-	<a href="#">Nova Categoria</a><br><br>
+	<a class='btn btn-default' href="{{route('admin.categories.create')}}">Nova Categoria</a><br><br>
 
 	<table class='table table-bordered'>
 		<thead>

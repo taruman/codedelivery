@@ -3,6 +3,7 @@
 @section('content')
 
 <div class='container'>
+	<h3>Nova Categoria</h3>
 
 	@if($errors->any())
 		<ul>

@@ -34,4 +34,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth.check
 	Route::get('products/edit/{id}', ['as' => 'products.edit', 'uses' => 'ProductsController@edit']);
 	Route::post('products/update/{id}', ['as' => 'products.update', 'uses' => 'ProductsController@update']);
 	Route::get('products/delete/{id}', ['as' => 'products.delete', 'uses' => 'ProductsController@delete']);
+
+	Route::get('orders', ['as' => 'orders.index', 'uses' => 'OrdersController@index']);
+	Route::get('orders/{id}', ['as' => 'orders.edit', 'uses' => 'OrdersController@edit']);
+	Route::post('orders/update/{id}', ['as' => 'orders.update', 'uses' => 'OrdersController@update']);
 });

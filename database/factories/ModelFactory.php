@@ -58,3 +58,10 @@ $factory->define(CodeDelivery\Models\OrderItem::class, function (Faker\Generator
         'price' => $faker->numberBetween(50, 100)
     ];
 });
+
+$factory->define(CodeDelivery\Models\Cupom::class, function (Faker\Generator $faker) {
+    return [
+        'value' => rand(50, 100),
+        'code' => rand(100, 10000),
+    ];
+});

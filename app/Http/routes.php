@@ -52,4 +52,14 @@ Route::group(['prefix' => 'customer', 'as' => 'customer.', 'middleware' => 'auth
 	Route::post('order/store', ['as' => 'order.store', 'uses' => 'CheckoutController@store']);
 });
 
+Route::group(['prefix' => 'api', 'as' => 'api.', 'middleware' => 'oauth'], function(){
+	Route::get('teste', function() {
+	    return ["teste" => "teste"];
+	});
+});
+
+Route::post('oauth/access_token', function() {
+    return Response::json(Authorizer::issueAccessToken());
+});
+
 
